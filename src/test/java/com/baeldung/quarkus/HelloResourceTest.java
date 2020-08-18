@@ -1,6 +1,9 @@
 package com.baeldung.quarkus;
 
 import io.quarkus.test.junit.QuarkusTest;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -11,11 +14,12 @@ public class HelloResourceTest {
 
     @Test
     public void testHelloEndpoint() {
-        given()
+        assertNotNull(given()
           .when().get("/hello")
           .then()
              .statusCode(200)
-             .body(is(HelloResource.BODY));
+             .body(is(HelloResource.BODY)));
+        
     }
 
 }
