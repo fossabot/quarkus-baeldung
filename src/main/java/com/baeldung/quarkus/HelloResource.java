@@ -7,10 +7,13 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
 public class HelloResource {
+	
+	public static final String BODY = "hello\n";
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "hello\n";
+        return BODY;
     }
+    
 }
