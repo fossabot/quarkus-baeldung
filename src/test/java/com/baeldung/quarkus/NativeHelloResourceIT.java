@@ -1,8 +1,8 @@
 package com.baeldung.quarkus;
 
-import io.quarkus.test.junit.SubstrateTest;
+import io.quarkus.test.junit.NativeImageTest;
 
-@SubstrateTest
+@NativeImageTest
 public class NativeHelloResourceIT extends HelloResourceTest {
 
     // Execute the same tests but in native mode.
